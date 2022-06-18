@@ -5,10 +5,6 @@ import NavBar from './components/NavBar';
 import AddTask from './screens/AddTask';
 import Account from './screens/Account';
 
-// Firebase Cloud Database
-// import { firebase } from './config/keys';
-
-
 export default function App() {
   return (
   <>
