@@ -15,7 +15,10 @@ const Settings = ({navigation}) => {
                         size={20}
                         color={Colors.gray}
                     />
-                    <TextInput style={styles.SettingsSearchText}placeholder='Add your Organization' />
+                    <TextInput style={styles.SettingsSearchText}
+                        placeholder="Add Your Organization"
+                        placeholderTextColor={Colors.gray} 
+                    />
                 </View>
             </View>
                 

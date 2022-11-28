@@ -7,7 +7,7 @@ const Ticket = ({ticketList}) => {
     const defaultImage = 'https://airbnb-clone-prexel-images.s3.amazonaws.com/genericAvatar.png';
     const [isComplete, setIsComplete] = useState();
     const [show, setShow] = useState();
-    const [showModal, setShowModal] = useState();
+    // const [showModal, setShowModal] = useState(false);
 
     const showContent = (key) => {
         if (show == key) {
@@ -22,14 +22,6 @@ const Ticket = ({ticketList}) => {
 
     const [users, setUsers] = useState([]);
     
-
-    // const completeTask = (key) => {
-    //     if (isComplete == key) {
-    //         setIsComplete(false);
-    //     } else {
-    //         setIsComplete(key);
-    //     }
-    // }
 
     return (
         <SafeAreaView style={{flex: 1}}>
@@ -50,7 +42,7 @@ const Ticket = ({ticketList}) => {
                             {data.item.subject}
                         </Text>
                     </View>
-                    <TouchableOpacity onPress={() => data.item.isCompleted = !data.item.isCompleted}>
+                    <TouchableOpacity onPress={() => data.item.isCompleted = !data.item.isCompleted}>{/*setShowModal(true)*/}
                         <Ionicons
                             name='ellipsis-horizontal-circle'
                             color={Colors.brand}
@@ -58,14 +50,7 @@ const Ticket = ({ticketList}) => {
                             style={styles.TicketCardImage}
                         />
                     </TouchableOpacity>
-                    {/* <TouchableOpacity key={data.item.key} onPress={()=>completeTask(data.item.key)}>
-                        <Ionicons 
-                            name={isComplete ? 'checkbox-outline' : 'square-outline'}
-                            color={Colors.brand}
-                            size={50}
-                            style={styles.TicketCardButton}
-                        />
-                    </TouchableOpacity> */}
+
                 </View>
                 <View style={styles.TicketCardExpand}>
                     <Text>

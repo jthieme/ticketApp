@@ -14,7 +14,8 @@ export const Colors = {
     black: '#000',
     dark: '#222',
     darkFont: '#bbb',
-    gray: '#888'
+    gray: '#888',
+    lightGray: '#dfdfdf'
 }
 
 export const styles = StyleSheet.create({
@@ -189,6 +190,21 @@ export const styles = StyleSheet.create({
     SettingsButton: {
         flex: -1,
         margin: 10
+    },
+    DividerLine: {
+        borderBottomColor: Colors.black,
+        borderBottomWidth: 1,
+        marginLeft: 5,
+        marginRight: 5,
+    },
+    FilterItem: {
+        fontSize:20,
+        paddingVertical: 8,
+    },
+    FilterItemBackground: {
+        // backgroundColor: Colors.lightGray,
+        width: '95%',
+        
     }
 
 });

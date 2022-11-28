@@ -5,12 +5,14 @@ import {TouchableOpacity} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
+import './Filter';
 
 
 import Home from './../screens/Home';
 import AddTask from './../screens/AddTask';
 import Account from './../screens/Account';
 import Settings from './../screens/Settings';
+import Filter from './Filter';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,6 +28,7 @@ const NavBar = ({navigation}) => {
         initialRouteName={homeName}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
+            
             let iconName;
             let rn = route.name;
 
@@ -50,24 +53,16 @@ const NavBar = ({navigation}) => {
           tabBarLabelStyle: styles.NavBarItem,
           tabBarStyle: styles.NavBar,
           headerTitleAlign: 'center',
-          headerRight: () => (
-            route.name === "Home" && (
-            <TouchableOpacity>
-              <Icon
-                style={{marginRight: 30}}
-                name='filter-outline'
-                size={30}
-                color={Colors.brand}
-                // onPress={console.log('hi')}
-              />
-            </TouchableOpacity> 
-            
-            )
-            )
         })}
         >
 
-        <Tab.Screen name={homeName} component={Home} />
+        <Tab.Screen name={homeName}
+          options={{  
+            headerRight: () => (
+              <Filter />
+            ), 
+          }}
+          component={Home} />
         <Tab.Screen name={addTaskName} component={AddTask} />
         <Tab.Screen name={accountName} component={Account} />
         <Tab.Screen name={settingsName} component={Settings} />

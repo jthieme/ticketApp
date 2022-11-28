@@ -99,7 +99,7 @@ const AddTask = ({navigation}) => {
                             <Text style={{fontSize: 16}}>Add Media</Text>
                         </TouchableOpacity>
 
-                        {/* {image !== null ? (
+                        {image !== null ? (
                             <ScrollView
                                 horizontal
                                 scrollEnabled
@@ -115,7 +115,7 @@ const AddTask = ({navigation}) => {
                                     source={{uri:image}}
                                 />
                             </ScrollView>
-                        ) : <Text style={{marginTop: '-6%'}} />} */}
+                        ) : <Text style={{marginTop: '-6%'}} />}
 
                         <MyTextInput
                             placeholder='Description *'
